@@ -9,23 +9,109 @@
   <meta property="og:description" content="Se un experto de los mundiales de Futbol."/>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="css/styles.css"/>
+  <style>
+    /* === Ajustes adicionales solo para esta página, sin tocar styles.css === */
+    .ebook-cover-wrap{
+      display:flex;
+      justify-content:center;
+      margin:1.5rem 0 2rem;
+    }
+    .ebook-cover-wrap img{
+      max-width:320px;
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      box-shadow:0 12px 32px rgba(0,0,0,.35);
+    }
+    .historic-gallery{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:1rem;
+      margin-top:1.25rem;
+    }
+    .historic-gallery figure{
+      margin:0;
+      overflow:hidden;
+      border-radius:10px;
+      position:relative;
+    }
+    .historic-gallery img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      aspect-ratio:4/3;
+      transition:transform .35s ease;
+    }
+    .historic-gallery figure:hover img{
+      transform:scale(1.05);
+    }
+    .historic-gallery figcaption{
+      position:absolute;
+      bottom:0; left:0; right:0;
+      background:linear-gradient(transparent, rgba(0,0,0,.75));
+      color:#fff;
+      font-size:.78rem;
+      padding:.6rem .7rem .5rem;
+    }
+    @media (max-width:600px){
+      .historic-gallery{ grid-template-columns:1fr; }
+    }
+
+    /* Botón de compra llamativo (pulso/flash) */
+    .btn-pulse{
+      animation:btnPulse 1.6s ease-in-out infinite;
+      position:relative;
+    }
+    @keyframes btnPulse{
+      0%   { box-shadow:0 0 0 0 rgba(255,90,30,.55); transform:scale(1); }
+      50%  { box-shadow:0 0 0 14px rgba(255,90,30,0); transform:scale(1.035); }
+      100% { box-shadow:0 0 0 0 rgba(255,90,30,0); transform:scale(1); }
+    }
+    .btn-secondary-cta{
+      text-align:center;
+      margin:2.5rem 0;
+      padding:2rem 1.25rem;
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .btn-secondary-cta h3{
+      margin:0 0 .4rem;
+    }
+    .btn-secondary-cta p{
+      margin:0 0 1.25rem;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .highlight-list li{ margin-bottom:.55rem; }
+    .quote-block{
+      border-left:3px solid var(--accent, #ff5a1e);
+      padding:.75rem 1rem;
+      margin:1.5rem 0;
+      font-style:italic;
+      color:var(--muted);
+    }
+  </style>
 </head>
 <body>
-
 <div id="header-placeholder"></div>
-
 <main>
   <div class="page-wrap">
-
     <section class="product-hero">
       <div><span class="tag">Ebook</span></div>
       <h1>HISTORIA DE LOS MUNDIALES DE FUTBOL: 1930 - 2022</h1>
       <p class="tagline">LEYENDAS, RÉCORDS & MOMENTOS INOLVIDABLES.</p>
+
+      <div class="ebook-cover-wrap">
+        <img src="img/ebook1/WorldCup Cover (1375 x 1144).png" alt="Portada del ebook Historia de los Mundiales de Futbol 1930-2022"/>
+      </div>
+
       <div class="price-row">
         <span class="price">$7.90 USD <span style="font-size:.85rem;font-weight:400;color:var(--muted);">USD</span></span>
-      </div>      
-      <!-- <a href="https://pay.hotmart.com/B106526015E?off=wmpavpci&checkoutMode=10&bid=1782691765707" target="_blank" rel="noopener noreferrer" class="btn">Comprar ahora →</a> -->
-      <a href="https://pay.hotmart.com/B106526015E?off=wmpavpci&checkoutMode=10&bid=1782691765707" class="btn">Comprar ahora →</a>
+      </div>
+      <a href="https://pay.hotmart.com/B106526015E?off=wmpavpci&checkoutMode=10&bid=1782691765707" class="btn btn-pulse">Comprar ahora →</a>
       <div class="trust-row">
         <span class="trust-item">Descarga inmediata</span>
         <span class="trust-item">Pago seguro</span>
@@ -33,30 +119,84 @@
       </div>
     </section>
 
-    <!-- ✏️ AGREGA MÁS CONTENIDO AQUÍ -->
     <section class="info-block">
       <h2>Descripción</h2>
-      <p>Aquí va la descripción completa del producto. Puedes editarla directamente en este archivo HTML.</p>
+      <p>
+        Desde el primer pitazo en Uruguay 1930 hasta la épica final de Qatar 2022, este ebook te lleva
+        a recorrer casi un siglo de historia del torneo más grande del fútbol mundial. No es solo un
+        recuento de resultados: es una colección narrada de los momentos que definieron generaciones,
+        de las leyendas que cambiaron el deporte para siempre y de las curiosidades que muy pocos
+        conocen sobre cada edición del Mundial.
+      </p>
+      <p>
+        Si alguna vez discutiste sobre quién fue el mejor jugador de la historia, qué selección merecía
+        ganar una final o cómo el fútbol unió (y dividió) países enteros, este ebook te da el contexto,
+        los datos y las historias para entender el juego como nunca antes.
+      </p>
+
+      <div class="quote-block">
+        "El Mundial no solo se juega en la cancha: se vive en la memoria de millones."
+      </div>
+    </section>
+
+    <section class="info-block">
+      <h2>Momentos que marcaron la historia</h2>
+      <p>Una muestra de los capítulos y episodios icónicos que encontrarás dentro del ebook:</p>
+      <div class="historic-gallery">
+        <figure>
+          <img src="img/ebook1/Maracanazo (1536 x 1024).png" alt="El Maracanazo, Brasil 1950"/>
+          <figcaption>El Maracanazo — Brasil 1950</figcaption>
+        </figure>
+        <figure>
+          <img src="img/ebook1/Alemania 7 - Brasil 1 (1727 x 863).png" alt="Alemania 7 - Brasil 1, Mundial 2014"/>
+          <figcaption>Alemania 7 - Brasil 1 — Brasil 2014</figcaption>
+        </figure>
+        <figure>
+          <img src="img/ebook1/Final Qatar 2022 (1536 x 1024).png" alt="Final del Mundial Qatar 2022"/>
+          <figcaption>La gran final — Qatar 2022</figcaption>
+        </figure>
+        <figure>
+          <img src="img/ebook1/Leyendas - Europe vs America (1536 x 1024).png" alt="Leyendas del fútbol, Europa vs América"/>
+          <figcaption>Leyendas: Europa vs. América</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="info-block">
       <h2>¿Qué incluye?</h2>
-      <ul class="simple-list">
-        <li>Elemento 1 — edítame</li>
-        <li>Elemento 2 — edítame</li>
-        <li>Elemento 3 — edítame</li>
+      <ul class="simple-list highlight-list">
+        <li>📖 Cobertura completa de los <strong>22 Mundiales</strong>, de 1930 a 2022, con datos clave de cada edición.</li>
+        <li>⭐ Perfiles de las <strong>leyendas</strong> que marcaron el torneo: Pelé, Maradona, Messi, Cruyff, Zidane y más.</li>
+        <li>🏆 Las finales, semifinales y partidos más recordados, explicados con contexto histórico y deportivo.</li>
+        <li>🤯 Curiosidades, récords y anécdotas poco conocidas de cada Copa del Mundo.</li>
+        <li>🌍 El impacto cultural y social del Mundial en los países anfitriones y participantes.</li>
+        <li>📱 Formato digital, fácil de leer en celular, tablet o computadora, descarga inmediata tras tu compra.</li>
       </ul>
     </section>
 
-    <!--
-    <div style="margin-top:2rem;">
-      <a href="ebooks.html" style="font-size:.82rem;color:var(--muted);">← Volver a Ebooks</a>
+    <section class="info-block">
+      <h2>¿Para quién es este ebook?</h2>
+      <p>
+        Ideal si eres aficionado al fútbol y quieres profundizar más allá de lo que ves en redes sociales,
+        si te encanta debatir sobre los mejores jugadores y partidos de la historia, o si simplemente
+        buscas un contenido entretenido y bien documentado para disfrutar antes, durante o después de
+        cada Mundial.
+      </p>
+    </section>
+
+    <div class="btn-secondary-cta">
+      <h3>No dejes pasar esta oportunidad</h3>
+      <p>Obtén acceso inmediato a toda la historia de los Mundiales por solo $7.90 USD.</p>
+      <a href="https://pay.hotmart.com/B106526015E?off=wmpavpci&checkoutMode=10&bid=1782691765707" class="btn btn-pulse">Quiero mi ebook ahora →</a>
+      <div class="trust-row" style="margin-top:1rem;">
+        <span class="trust-item">Descarga inmediata</span>
+        <span class="trust-item">Pago seguro</span>
+        <span class="trust-item">7 días de garantía</span>
+      </div>
     </div>
-    -->
 
   </div>
 </main>
-
 <div id="footer-placeholder"></div>
 <script src="js/main.js"></script>
 </body>
